@@ -11,9 +11,9 @@ services:
             context: .
             args:
                 - ENV=prod
-        container_name: my_app_prod
+        container_name: devops_app
         ports:
-            - "4000:3000"
+            - "3000:3000"
         environment:
             - MONGODB_URL=mongodb://mongo_prod:27017/todo-app
             - ENV=prod

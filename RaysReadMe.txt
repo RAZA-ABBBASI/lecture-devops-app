@@ -29,3 +29,22 @@ Questions/Queries
 4. Add testing in the github action 
 5. Add terraform provisioning 
 6. Add prometheus monitoring to the app 
+
+Task List
+1. Local Image build [Done]
+2. Deployment to the cluster [Done]
+3. CI/CD through github actions [Raza]
+4. Adding Selenium test in the pipeline [Raza]
+5. Provisioning Terraform through github actions [Abbaq]
+6. Monitoring cluster through prometheus [Abbaq]
+
+
+Docker build command: 
+docker build . -t devops_app 
+Docker run command at local: 
+docker run -d -p 3000:3000 --name devops_app --link mongo_prod -e MONGODB_URL='mongodb://mongo_prod:27017/devops_app' -e ENV='prod' --restart always todo_server
+
+
+
+docker run -d -p 5000:5000 --name devops_app --link mongo_prod -e CLIENT='localhost:8080' -e MONGODB_URL='mongodb://mongo_prod:27017/devops_app' -e ENV='prod' --restart always todo_server
+
